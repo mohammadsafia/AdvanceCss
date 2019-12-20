@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./header.style.scss";
 class Header extends Component {
   state = {};
@@ -17,6 +18,8 @@ class Header extends Component {
             <span className="heading-primary-main">Terkwaz</span>
             <span className="heading-primary-sub">business solutions </span>
           </h1>
+
+          <Link className="btn btn-white btn-animated">Discover our tours</Link>
         </div>
       </header>
     );
