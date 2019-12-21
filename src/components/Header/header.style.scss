@@ -3,15 +3,16 @@
 @import "../abstracts/variables";
 @import "../base/base";
 @import "../base/animations";
-@import "../base/typography";
 @import "../base/utilities";
 @import "../base/button";
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom,
+  background-image: linear-gradient(
+      to right bottom,
       rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)),
+      rgba($color-primary-dark, 0.8)
+    ),
     url("/assets/img/hero.jpg");
   background-size: cover;
   background-position: top;

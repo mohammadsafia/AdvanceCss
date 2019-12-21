@@ -18,7 +18,7 @@ class Header extends Component {
             <span className="heading-primary--main">Terkwaz</span>
             <span className="heading-primary--sub">business solutions </span>
           </h1>
-          <Link className="btn btn--white btn--animated">
+          <Link to="/" className="btn btn--white btn--animated">
             Discover our tours
           </Link>
         </div>
