@@ -29,39 +29,7 @@
       text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
     }
   }
-  .heading-tertiary {
-    font-size: $defalut-font-size;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .paragraph {
-    font-size: $defalut-font-size;
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-  }
-  .btn-text {
-    &:link,
-    &:visited {
-      font-size: $defalut-font-size;
-      color: $color-primary;
-      display: inline-block;
-      text-decoration: none;
-      border-bottom: 0.1rem solid $color-primary;
-      padding: 0.3rem;
-      transition: all 0.2s;
-    }
-    &:hover {
-      background-color: $color-primary;
-      color: $color-white;
-      box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.15);
-      transform: translateY(-0.2rem);
-    }
-    &:active {
-      box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.15);
-      transform: translateY(0);
-    }
-  }
+
   .composition {
     position: relative;
     &__photo {
@@ -92,5 +60,17 @@
         z-index: 10;
       }
     }
+  }
+}
+
+.heading-tertiary {
+  font-size: $defalut-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: $defalut-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }

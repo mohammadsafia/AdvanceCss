@@ -1,0 +1,42 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/base";
+@import "../base/animations";
+@import "../base/utilities";
+@import "../base/button";
+.section-feature {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("/assets/img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -20vh;
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  .feature-box {
+    background-color: rgba($color: $color-white, $alpha: 0.8);
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 3px;
+    padding: 2.5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
+    transition: all 0.3s;
+    height: 30rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    &__icon {
+      font-size: 6rem;
+      margin-bottom: 2rem;
+    }
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
+  }
+}
