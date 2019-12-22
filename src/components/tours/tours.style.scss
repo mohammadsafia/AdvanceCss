@@ -1,0 +1,185 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/base";
+@import "../base/animations";
+@import "../base/utilities";
+@import "../base/button";
+
+.section-tours {
+    background-color: $color-gray-light-1;
+    padding: 25rem 0 50rem 0;
+    margin-top: -20vh;
+
+    .heading-secondary {
+        font-size: 3.4rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        background-image: linear-gradient(to right,
+                $color-primary-light,
+                $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: 0.2rem;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+            text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
+        }
+    }
+}
+
+.cards {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    &__side {
+        height: 52rem;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .15);
+        overflow: hidden;
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiray-light, $color-tertiray-dark);
+
+            }
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    //Front Side Styleing
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url("/assets/img/nat-5.jpg");
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url("/assets/img/nat-6.jpg");
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiray-light, $color-tertiray-dark), url("/assets/img/nat-7.jpg");
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 14rem;
+        right: 2rem;
+        text-align: right;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: .4rem 1.5rem;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-secondary-light, .85),
+                    rgba($color-secondary-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-primary-light, .85),
+                    rgba($color-primary-dark, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-tertiray-light, .85),
+                    rgba($color-tertiray-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            padding: 0;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+}

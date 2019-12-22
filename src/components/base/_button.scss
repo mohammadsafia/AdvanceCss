@@ -1,4 +1,5 @@
 .btn {
+
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -21,7 +22,7 @@
 
     &:active {
       transform: translateY(-0.1rem);
-      box-shadow: 0.5rem 1rem rgba($color: $color-black, $alpha: 1);
+      box-shadow: 0 0.5rem 1rem rgba($color: $color-black, $alpha: .5);
     }
 
     &::after {
@@ -47,13 +48,23 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
 
-  
+
   &-text {
+
     &:link,
     &:visited {
       font-size: $defalut-font-size;
@@ -64,12 +75,14 @@
       padding: 0.3rem;
       transition: all 0.2s;
     }
+
     &:hover {
       background-color: $color-primary;
       color: $color-white;
       box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.15);
       transform: translateY(-0.2rem);
     }
+
     &:active {
       box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.15);
       transform: translateY(0);

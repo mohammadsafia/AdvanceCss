@@ -8,15 +8,13 @@
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(
-      to right bottom,
+  background-image: linear-gradient(to right bottom,
       rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
+      rgba($color-primary-dark, 0.8)),
     url("/assets/img/hero.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 69vh, 0 100%);
   position: relative;
 
   &__logo-box {

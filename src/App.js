@@ -4,6 +4,7 @@ import Header from "./components/Header/header.component";
 import Footer from "./components/Footer/footer.component";
 import About from "./components/about/about.component";
 import Feature from "./components/feature/feature.component";
+import Tours from "./components/tours/tours.component";
 import "./App.scss";
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <About />
         <Feature />
+        <Tours />
         <Footer />
       </BrowserRouter>
     </Fragment>
