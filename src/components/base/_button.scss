@@ -1,5 +1,6 @@
 .btn {
 
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -9,6 +10,10 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
+    font-size: 1.5rem;
+    //Change for <button> element
+    border: none;
+    cursor: pointer;
 
     &:hover {
       transform: translateY(-0.3rem);

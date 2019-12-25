@@ -1,0 +1,146 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/base";
+@import "../base/animations";
+@import "../base/utilities";
+@import "../base/button";
+
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+    .heading-secondary {
+        font-size: 3.4rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        background-image: linear-gradient(to right,
+                $color-primary-light,
+                $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: 0.2rem;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+            text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
+        }
+    }
+
+    .book {
+        background-image: linear-gradient(105deg,
+                rgba($color-white, .9) 0%,
+                rgba($color-white, .9) 50%,
+                transparent 50%),
+            url("/assets/img/nat-10.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .2);
+        height: 50rem;
+
+        &__form {
+            width: 50%;
+            padding: 6rem;
+        }
+    }
+}
+
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color: $color-white, $alpha: .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+
+        &::-webkit-input-placeholder {
+            color: $color-gray-dark-2;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $defalut-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+    }
+
+    &__radio-input:checked~&__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+}
