@@ -70,7 +70,9 @@ class Story extends Component {
             </div>
           </div>
           <div className="text-center u-margin-top ">
-            <Link className="btn-text">Read all stories &rarr;</Link>
+            <Link to="/" className="btn-text">
+              Read all stories &rarr;
+            </Link>
           </div>
         </div>
       </section>

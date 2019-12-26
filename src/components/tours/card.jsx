@@ -12,7 +12,7 @@ class Card extends Component {
             </div>
             <h4 className="cards__heading">
               <span
-                class={`cards__heading-span cards__heading-span--${number}`}
+                className={`cards__heading-span cards__heading-span--${number}`}
               >
                 The Sea Explorer
               </span>
@@ -35,7 +35,7 @@ class Card extends Component {
                 <p className="cards__price-only">Only</p>
                 <p className="cards__price-value">{price}</p>
               </div>
-              <Link to="" className="btn btn--white">
+              <Link to="/" className="btn btn--white">
                 Book Now!
               </Link>
             </div>
