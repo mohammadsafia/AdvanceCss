@@ -14,12 +14,12 @@ class Story extends Component {
           </video>
         </div>
         <div className="container">
-          <div className="text-center u-margin-bottom-8">
+          <div className="text-center  m-4">
             <h2 className="heading-secondary">
               We make people genuinely happy
             </h2>
           </div>
-          <div className="row u-margin-bottom-8 ">
+          <div className="row u-margin-bottom-8 m-3 ">
             <div className="story">
               <figure className="story__shape">
                 <img
@@ -44,7 +44,7 @@ class Story extends Component {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row m-3">
             <div className="story">
               <figure className="story__shape">
                 <img

@@ -4,7 +4,7 @@ class Card extends Component {
   render() {
     const { number, day, pepole, tour, level, price } = this.props;
     return (
-      <div className="col-md-4">
+      <div className="col-md-4 my-3">
         <div className="cards">
           <div className="cards__side cards__side--front">
             <div className={`cards__picture cards__picture--${number}`}>

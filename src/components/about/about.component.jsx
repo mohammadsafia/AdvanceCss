@@ -14,7 +14,7 @@ class About extends Component {
               </h2>
             </div>
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6 my-5">
                 <h3 className="heading-tertiary mb-3">
                   You'r going to fall in love with nature
                 </h3>
@@ -36,7 +36,7 @@ class About extends Component {
                   Learn more &rarr;
                 </Link>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 my-5">
                 <div className="composition">
                   <img
                     src="/assets/img/nat-1-large.jpg"

@@ -5,52 +5,58 @@
 @import "../base/animations";
 @import "../base/utilities";
 @import "../base/button";
+@import "../base/typography";
 
 .section-stories {
     padding: 15rem 0;
     position: relative;
 
-    .heading-secondary {
-        font-size: 3.4rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: inline-block;
-        background-image: linear-gradient(to right,
-                $color-primary-light,
-                $color-primary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
-        letter-spacing: 0.2rem;
-        transition: all 0.2s;
-
-        &:hover {
-            transform: skewY(2deg) skewX(15deg) scale(1.1);
-            text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
-        }
+    @include respond(tab-port) {
+        padding: 10rem 0;
     }
 }
 
 .story {
     width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba($color: $color-black, $alpha: 0.1);
-    background-color: rgba($color: $color-white, $alpha: .6);
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
     border-radius: 3px;
-    padding-left: 9rem;
     padding: 6rem;
+    padding-left: 9rem;
     font-size: $defalut-font-size;
     transform: skewX(-12deg);
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
 
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -62,6 +68,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
@@ -87,7 +97,6 @@
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);
     }
-
 }
 
 .bg-video {
@@ -99,6 +108,7 @@
     z-index: -1;
     opacity: .15;
     overflow: hidden;
+
     &__content {
         height: 100%;
         width: 100%;

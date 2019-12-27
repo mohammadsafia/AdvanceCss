@@ -15,7 +15,7 @@ class Feature extends Component {
       <section className="section-feature">
         <div className="container">
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-3 my-4">
               <div className="feature-box">
                 <MdLanguage className="feature-box__icon" />
                 <h3 className="heading-tertiary mb-3">Explore the world</h3>
@@ -25,7 +25,7 @@ class Feature extends Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 my-4">
               <div className="feature-box">
                 <MdFingerprint className="feature-box__icon" />
                 <h3 className="heading-tertiary mb-3">But your fingerprint</h3>
@@ -35,7 +35,7 @@ class Feature extends Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 my-4">
               <div className="feature-box">
                 <MdFavoriteBorder className="feature-box__icon" />
                 <h3 className="heading-tertiary mb-3">Live a healthier life</h3>
@@ -45,7 +45,7 @@ class Feature extends Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 my-4">
               <div className="feature-box">
                 <MdTimer className="feature-box__icon" />
                 <h3 className="heading-tertiary mb-3">Meet Nature</h3>

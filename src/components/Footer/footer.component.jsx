@@ -10,11 +10,11 @@ class Footer extends Component {
           <div className="footer__logo-box">
             <picture className="footer__logo">
               <source
-                srcSet="/assets/img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                srcSet="/assets/img/logo-green-small-1x.png 1x, /assets/img/logo-green-small-2x.png 2x"
                 media="(max-width: 37.5em)"
               />
               <img
-                srcSet="/assets/img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+                srcSet="/assets/img/logo-green-1x.png 1x, /assets/img/logo-green-2x.png 2x"
                 alt="Fulllogo"
                 src="/assets/img/logo-green-2x.png"
               />

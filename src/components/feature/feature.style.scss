@@ -5,19 +5,24 @@
 @import "../base/animations";
 @import "../base/utilities";
 @import "../base/button";
+@import "../base/typography";
+
 .section-feature {
   padding: 20rem 0;
-  background-image: linear-gradient(
-      to right bottom,
+  background-image: linear-gradient(to right bottom,
       rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
+      rgba($color-primary-dark, 0.8)),
     url("/assets/img/nat-4.jpg");
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -20vh;
-  & > * {
+
+  &>* {
     transform: skewY(7deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 15rem 0
   }
 
   .feature-box {
@@ -28,13 +33,23 @@
     padding: 2.5rem;
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
     transition: all 0.3s;
-    height: 30rem;
     cursor: pointer;
     margin-top: 2rem;
+    height: 100%;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+    }
+
     &__icon {
       font-size: 6rem;
       margin-bottom: 2rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 0;
+      }
     }
+
     &:hover {
       transform: translateY(-1.5rem) scale(1.03);
     }

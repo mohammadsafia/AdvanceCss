@@ -5,29 +5,15 @@
 @import "../base/animations";
 @import "../base/utilities";
 @import "../base/button";
+@import "../base/typography";
 
 
 .section-book {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
-    .heading-secondary {
-        font-size: 3.4rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: inline-block;
-        background-image: linear-gradient(to right,
-                $color-primary-light,
-                $color-primary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
-        letter-spacing: 0.2rem;
-        transition: all 0.2s;
-
-        &:hover {
-            transform: skewY(2deg) skewX(15deg) scale(1.1);
-            text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
-        }
+    @include respond(tab-port) {
+        padding: 10rem 0;
     }
 
     .book {
@@ -42,9 +28,35 @@
         box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .2);
         height: 50rem;
 
+        @include respond(tab-land) {
+            background-image: linear-gradient(105deg,
+                    rgba($color-white, .9) 0%,
+                    rgba($color-white, .9) 65%,
+                    transparent 65%),
+                url("/assets/img/nat-10.jpg");
+            background-size: cover;
+        }
+
+        @include respond(tab-port) {
+            background-image: linear-gradient(to right,
+                    rgba($color-white, .9) 0%,
+                    rgba($color-white, .9) 100%),
+                url("/assets/img/nat-10.jpg");
+        }
+
         &__form {
             width: 50%;
             padding: 6rem;
+
+            @include respond(tab-land) {
+                width: 65%;
+                padding: 2rem;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+                padding: 2rem;
+            }
         }
     }
 }
@@ -55,24 +67,25 @@
     }
 
     &__input {
+        font-size: 1.5rem;
         font-family: inherit;
         color: inherit;
-        font-size: 1.5rem;
         padding: 1.5rem 2rem;
         border-radius: 2px;
-        background-color: rgba($color: $color-white, $alpha: .5);
+        background-color: rgba($color-white, .5);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        transition: all .3s;
 
-        &::-webkit-input-placeholder {
-            color: $color-gray-dark-2;
+        @include respond(tab-port) {
+            width: 100%;
         }
 
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .1);
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 3px solid $color-primary;
         }
 
@@ -80,7 +93,11 @@
             border-bottom: 3px solid $color-secondary-dark;
         }
 
+        &::-webkit-input-placeholder {
+            color: $color-gray-dark-2;
+        }
     }
+
 
     &__label {
         font-size: 1.2rem;
@@ -101,6 +118,11 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-input {
@@ -136,7 +158,7 @@
             transform: translate(-50%, -50%);
             background-color: $color-primary;
             opacity: 0;
-            transition: opacity .5s;
+            transition: opacity .2s;
         }
     }
 
