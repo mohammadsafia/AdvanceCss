@@ -25,11 +25,5 @@ html {
 }
 
 body {
-    padding: 3rem;
     box-sizing: border-box;
-
-    @include respond(tab-port) {
-        //width < 900
-        padding: 0;
-    }
 }
